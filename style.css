@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+        background: linear-gradient(120deg, #f8f7f6d8, #e84cc4da);
+
+}
+
+
+main {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    width: 600px;
+    height: 600px;
+    background-image: conic-gradient(
+        from var(--border-angle),
+        rgb(225, 86, 128),
+        rgb(245, 53, 139),
+        rgb(246, 236, 236)
+    ),
+    conic-gradient(
+        from var(--border-angle),
+        transparent 20%,
+        rgb(255, 0, 102),
+        rgb(250, 247, 248)
+    );
+    background-size: calc(100% - (var(--border-size)*2))
+      calc(100% - (var(--border-size)*2)),
+      cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bg-spin 3s linear infinite;
+    border-radius: 600px;
+    border: 15px groove #f3139d;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.number-1 {
+    transform: rotate(30deg);
+}
+
+.number-2 {
+    transform: rotate(60deg);
+}
+
+.number-3 {
+    transform: rotate(90deg);
+}
+
+.number-4 {
+    transform: rotate(120deg);
+}
+
+.number-5 {
+    transform: rotate(150deg);
+}
+
+.number-6 {
+    transform: rotate(180deg);
+}
+
+.number-7 {
+    transform: rotate(210deg);
+}
+
+.number-8 {
+    transform: rotate(240deg);
+}
+
+.number-9 {
+    transform: rotate(270deg);
+}
+
+.number-10 {
+    transform: rotate(300deg);
+}
+
+.number-11 {
+    transform: rotate(330deg);
+}
+
+.number-12 {
+    transform: rotate(360deg);
+}
+
+.second-hand {
+    width: 5px;
+    height: 240px;
+    background-color: #f5f2f2;
+    position: absolute;
+    border-radius: 5px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.minute-hand {
+    width: 8px;
+    height: 200px;
+    background-color: #020202;
+    position: absolute;
+    border-radius: 10px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.hour-hand {
+    width: 13px;
+    height: 150px;
+    background-color: #030303;
+    position: absolute;
+    border-radius: 10px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.center {
+    width: 20px;
+    height: 20px;
+    background-color: #fbf7f7;
+    border-radius: 20px;
+    position: absolute;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #f8f8f8dc, #ea1c60da);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px rgba(249, 247, 248, 0.5);
+}
+
+.relogio div {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    
+    --border-size: 3px;
+    --border-angle: 0turn;
+    width: 50vmin;
+    height: 28vmin;
+    background-image: conic-gradient(
+        from var(--border-angle),
+        rgb(225, 86, 128),
+        rgb(249, 72, 146),
+        rgb(246, 236, 236)
+    ),
+    conic-gradient(
+        from var(--border-angle),
+        transparent 20%,
+        rgb(255, 0, 102),
+        rgb(5, 5, 5)
+    );
+    background-size: calc(100% - (var(--border-size)*2))
+      calc(100% - (var(--border-size)*2)),
+      cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+  
+
+.relogio span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.relogio span.tempo {
+    font-size: 10px;
+}
+
+.date-container{
+min-width: 100%;
+min-height: 50vh;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
